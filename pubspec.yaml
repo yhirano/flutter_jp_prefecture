@@ -1,10 +1,10 @@
 name: jp_prefecture
 description: A library that converts Japanese prefecture codes and prefecture names.
-version: 1.0.0
+version: 2.0.0
 homepage: https://github.com/yhirano/flutter_jp_prefecture
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
@@ -33,7 +33,7 @@ flutter:
 
   # To add custom fonts to your package, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
+  # "family" key with the font family name, and a "fonts" key with adar
   # list giving the asset and other descriptors for the font. For
   # example:
   # fonts:

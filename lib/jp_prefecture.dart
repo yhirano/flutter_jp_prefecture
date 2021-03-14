@@ -36,7 +36,7 @@ class JpPrefecture {
   String get area => _area;
 
   /// Prefecture type(都, 道, 府, 県) name in Japanese.
-  String get type {
+  String? get type {
     final type = _name.substring(_name.length - 1);
     switch (type) {
       case '都':
@@ -57,12 +57,12 @@ class JpPrefecture {
   static Iterable<JpPrefecture> get all => _data.values;
 
   /// Get a prefecture by prefecture code. Return null if not found.
-  static JpPrefecture findByCode(int code) {
+  static JpPrefecture? findByCode(int code) {
     return _data[code];
   }
 
   /// Get a prefecture by name. Return null if not found.
-  static JpPrefecture findByName(String name) {
+  static JpPrefecture? findByName(String name) {
     final code = _findCodeByName(name);
     if (code == null) {
       return null;
@@ -70,8 +70,8 @@ class JpPrefecture {
     return _data[code];
   }
 
-  static int _findCodeByName(String name) {
-    if (name == null || name.isEmpty) {
+  static int? _findCodeByName(String name) {
+    if (name.isEmpty) {
       return null;
     }
 
@@ -86,9 +86,6 @@ class JpPrefecture {
   }
 
   static String _capitalize(String text) {
-    if (text == null) {
-      return null;
-    }
     if (text.isEmpty) {
       return text;
     }

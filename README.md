@@ -8,6 +8,9 @@ A library that converts Japanese prefecture codes and prefecture names.
 
 ```dart
 final pref = JpPrefecture.findByCode(13);
+if (pref == null) {
+  return;
+}
 print(pref.code); // => 13
 print(pref.name); // => '東京都'
 print(pref.nameE); // => 'Tokyo'
@@ -21,6 +24,9 @@ print(pref.type); // => '都'
 
 ```dart
 final pref = JpPrefecture.findByName('東京都');
+if (pref == null) {
+  return;
+}
 print(pref.code); // => 13
 print(pref.name); // => '東京都'
 print(pref.nameE); // => 'Tokyo'
